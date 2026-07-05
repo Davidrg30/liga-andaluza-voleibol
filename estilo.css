@@ -1,0 +1,159 @@
+/* VARIABLES DE COLOR */
+:root {
+    --fondo: #0a1628;
+    --panel: #111f36;
+    --franja: #16283f;
+    --rojo: #e8352c;
+    --texto: #f4f6f9;
+    --texto-secundario: #7d8ba0;
+}
+
+/* RESPINSIVE */
+@media (max-width: 700px) {
+    /* estas reglas solo se aplican si la ventana mide 700px o menos */
+}
+
+@media (max-width: 480px) {
+    nav {
+        padding: 10px 12px;
+        gap: 2px;
+    }
+
+    nav a {
+        font-size: 11px;
+        padding: 8px 10px;
+        letter-spacing: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        padding: 10px 12px;
+        gap: 2px;
+    }
+
+    nav a {
+        font-size: 11px;
+        padding: 8px 10px;
+        letter-spacing: 0;
+    }
+
+    .grupos {
+        flex-direction: column;
+    }
+}
+
+/* RESETEO BÁSICO */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ESTILOS GLOBALES */
+body {
+    background-color: var(--fondo);
+    color: var(--texto);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
+}
+
+h1, h2, h3 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* CABECERA Y NAVEGACIÓN */
+header {
+    background-color: var(--panel);
+    border-bottom: 3px solid var(--franja);
+    position: sticky;
+    top: 0;
+}
+
+nav {
+    display: flex;
+    gap: 8px;
+    padding: 16px 24px;
+}
+
+nav a {
+    color: var(--texto-secundario);
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    padding: 10px 18px;
+    border-radius: 2px;
+    transition: color 0.2s, background-color 0.2s;
+}
+
+nav a:hover {
+    color: var(--texto);
+    background-color: var(--franja);
+}
+
+nav a.activo {
+    color: var(--texto);
+    background-color: var(--rojo);
+}
+
+/* CONTENIDO PRINCIPAL */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 24px;
+}
+
+/* SECCIONES (Primera / Segunda / Tercera Andaluza) */
+section {
+    background-color: var(--panel);
+    border: 1px solid var(--franja);
+    border-radius: 4px;
+    padding: 24px;
+    margin-bottom: 48px;
+}
+
+section h2 {
+    margin-bottom: 20px;
+}
+
+/* GRUPOS (Masculino / Femenino) */
+.grupo {
+    margin-bottom: 24px;
+}
+
+.grupo h3 {
+    color: var(--rojo);
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.grupo ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 10px;
+}
+
+/* TARJETAS DE EQUIPO */
+.equipo {
+    background-color: var(--franja);
+    padding: 12px 14px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.grupos {
+    display: flex;
+    gap: 24px;
+}
+
+.grupo {
+    flex: 1;
+}
